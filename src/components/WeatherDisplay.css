@@ -1,0 +1,108 @@
+.weather-display {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.weather-current {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 18px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.add-to-favorites-button {
+  display: block;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+.current-weather-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.current-weather-deatils {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather-current p {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.weather-forecast {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.weather-forecast-header {
+  text-align: center;
+  font-size: 24px;
+}
+
+.forecast-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+  justify-content: space-between; /* Add space between items */
+}
+
+.forecast-item {
+  flex: 1 1 calc(25% - 20px); /* Calculate width for four items in one row */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.weather-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .forecast-item {
+    flex-basis: calc(33.33% - 20px); /* Three items in one row */
+  }
+}
+
+@media (max-width: 768px) {
+  .forecast-item {
+    flex-basis: calc(50% - 20px); /* Two items in one row */
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-item {
+    flex-basis: calc(100% - 20px); /* One item in one row */
+  }
+}
